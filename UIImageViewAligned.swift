@@ -209,6 +209,7 @@ open class UIImageViewAligned: UIImageView {
     }
     
     private func setup(image: UIImage? = nil, highlightedImage: UIImage? = nil) {
+        super.image = nil
         realImageView = UIImageView(image: image ?? super.image, highlightedImage: highlightedImage ?? super.highlightedImage)
         realImageView?.frame = bounds
         realImageView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
